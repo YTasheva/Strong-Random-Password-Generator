@@ -42,7 +42,7 @@
 
 ### Links
 
-- Solution URL: 
+- Solution URL: (https://github.com/YTasheva/Strong-Random-Password-Generator)
 - Live Site URL: 
   
 ### Built With
