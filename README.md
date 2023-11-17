@@ -42,8 +42,8 @@
 
 ### Links
 
-- Solution URL: (https://github.com/YTasheva/Strong-Random-Password-Generator)
-- Live Site URL:(https://ytasheva.github.io/Strong-Random-Password-Generator/)
+- Solution URL: https://github.com/YTasheva/Strong-Random-Password-Generator
+- Live Site URL: https://ytasheva.github.io/Strong-Random-Password-Generator/
   
 ### Built With
 
