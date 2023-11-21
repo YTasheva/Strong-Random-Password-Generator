@@ -22,7 +22,7 @@ var specialCharacters = [
   '~',
   '-',
   '_',
-  '.'
+  '.',
 ];
 
 // Array of numeric characters to be included in password
@@ -55,7 +55,7 @@ var lowerCasedCharacters = [
   'w',
   'x',
   'y',
-  'z'
+  'z',
 ];
 
 // Array of uppercase characters to be included in password
@@ -85,7 +85,7 @@ var upperCasedCharacters = [
   'W',
   'X',
   'Y',
-  'Z'
+  'Z',
 ];
 
 
@@ -98,15 +98,15 @@ generateBtn.addEventListener("click", initApp);
 // Function that order the calls of the other functions
 function initApp() {
   let passLength = getPassLengthOptions();
-  console.log("Password Length: ${passLength");
+  console.log(`Password Length: ${passLength}`);
   let options = getPassCharOptions(passLength);
-  console.log("User options:");
+  console.log(`User options:`);
   console.log(options);
   let charArray = generateCharArray(options);
-  console.log("Characters Array based on the user options: ${charArray}");
+  console.log(`Characters Array based on the user options: ${charArray}`);
   // let char = getRandomChararacter(charArray);
   let password = generatePassword(passLength, charArray);
-  console.log("Generated password: ${password}");
+  console.log(`Generated password: ${password}`);
   writePassword(password);
 }
 
@@ -133,13 +133,12 @@ function getPassCharOptions() {
     !options.special
   ) {
     alert(
-      "You need to select at least one charcater type to generate the password:
+      `You need to select at least one charcater type to generate the password:
       1. Upper-case Letters
       2. Lower-case Letters
       3. Numbers
       4. Special Characters
-      "
-      
+      `
     );
     options.upper = confirm(
       "Do you need Upper-case Letters in your password:\n" +
