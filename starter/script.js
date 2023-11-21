@@ -97,22 +97,22 @@ generateBtn.addEventListener("click", initApp);
 
 // Function that order the calls of the other functions
 function initApp() {
-  let passLength = getPassLengthOptions();
+  var passLength = getPassLengthOptions();
   console.log(`Password Length: ${passLength}`);
-  let options = getPassCharOptions(passLength);
+  var options = getPassCharOptions(passLength);
   console.log(`User options:`);
   console.log(options);
-  let charArray = generateCharArray(options);
+  var charArray = generateCharArray(options);
   console.log(`Characters Array based on the user options: ${charArray}`);
-  // let char = getRandomChararacter(charArray);
-  let password = generatePassword(passLength, charArray);
+  // var char = getRandomChararacter(charArray);
+  var password = generatePassword(passLength, charArray);
   console.log(`Generated password: ${password}`);
   writePassword(password);
 }
 
 // Function to prompt user for password options
 function getPasswordLengthOptions() {
-  let passLength = 0;
+  var passLength = 0;
   while (isNaN(passLength) || passLength < 10 || passLength > 64) {
     passLength = parseInt(
       window.prompt(
@@ -125,7 +125,7 @@ function getPasswordLengthOptions() {
 
 // Function to confirm the user password characters options
 function getPassCharOptions() {
-  let options = { upper: false, lower: false, numeric: false, special: false };
+  var options = { upper: false, lower: false, numeric: false, special: false };
   while (
     !options.upper &&
     !options.lower &&
@@ -161,7 +161,7 @@ function getPassCharOptions() {
 
 // Function for creating array based on the password options
 function generateCharArray(options) {
-  let charArray = [];
+  var charArray = [];
   if (options.upper) {
     charArray = charArray.concat(upperCasedCharacters);
   }
@@ -179,15 +179,15 @@ function generateCharArray(options) {
 
 // Function for getting a random element from an array
 function getRandomCharacter(array) {
-  let randomIndex = Math.floor(Math.random() * array.length);
+  var randomIndex = Math.floor(Math.random() * array.length);
   // console.log(`${randomIndex} - ${array[randomIndex]}`);
-  let char = array[randomIndex];
+  var char = array[randomIndex];
   return char;
 }
 
 // Function to generate password with user input
 function generatePassword(passLength, charArray) {
-  let password = "";
+  var password = "";
   for (let i = 0; i < passLength; i++) {
     password += getRandomChararacter(charArray);
   }
@@ -196,6 +196,6 @@ function generatePassword(passLength, charArray) {
 
 // Write password to the #password input
 function writePassword(password) {
-  let passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
