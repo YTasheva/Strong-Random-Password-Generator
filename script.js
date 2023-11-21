@@ -110,8 +110,8 @@ function initApp() {
   writePassword(password);
 }
 
-// Function to prompt user for password options
-function getPasswordLengthOptions() {
+// Function to prompt user for password length options
+function getPassLengthOptions() {
   var passLength = 0;
   while (isNaN(passLength) || passLength < 10 || passLength > 64) {
     passLength = parseInt(
