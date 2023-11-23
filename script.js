@@ -113,10 +113,10 @@ function initApp() {
 // Function to prompt user for password length options
 function getPassLengthOptions() {
   let passLength = 0;
-  while (isNaN(passLength) || passLength < 10 || passLength > 64) {
+  while (isNaN(passLength) || passLength < 8 || passLength > 128) {
     passLength = parseInt(
       window.prompt(
-        "How many character password do you need?\nYou must choose a number between 10-64!"
+        "Password must be at least 8 characters and no longer than 128 in length!\nClick ok to continue."
       )
     );
   }
@@ -133,26 +133,26 @@ function getPassCharOptions() {
     !options.special
   ) {
     alert(
-      `You need to select at least one charcater type to generate the password:
-      1. Upper-case Letters
-      2. Lower-case Letters
-      3. Numbers
-      4. Special Characters
+      `To generate a password select at least one of the four character types:
+      1. Uppercase Letters: A-Z
+      2. Lowercase Letters: a-z
+      3. Numbers: 0-9
+      4. Special Characters (for example ?!@*)
       `
     );
     options.upper = confirm(
-      "Do you need Upper-case Letters in your password:\n" +
+      "Include Uppercase Letters:\n" +
         upperCasedCharacters.join("")
     );
     options.lower = confirm(
-      "Do you need Lower-case Letters in your password:\n" +
+      "Include Lowercase Letters:\n" +
         lowerCasedCharacters.join("")
     );
     options.numeric = confirm(
-      "Do you need Numbers in your password:\n" + numericCharacters.join("")
+      "Include Numbers:\n" + numericCharacters.join("")
     );
     options.special = confirm(
-      "Do you need Special Characters in your password:\n" +
+      "Include Special Characters:\n" +
         specialCharacters.join("")
     );
   }
