@@ -31,12 +31,9 @@
   * Code should validate for each input and at least one character type should be selected
   * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
  
-  - The following image shows a demo of the web application's appearance and functionality:
-
-<img width="491" alt="Screenshot" src="https://github.com/YTasheva/Strong-Random-Password-Generator/assets/148258557/c37bbd29-f1c0-4dd1-9816-64a761f8d8c8">
-
 ### Screenshot
 
+<img width="796" alt="Screenshot " src="https://github.com/YTasheva/Strong-Random-Password-Generator/assets/148258557/99c1a945-7688-42fa-9a85-96b15e50e44e">
 
 ### Links
 
